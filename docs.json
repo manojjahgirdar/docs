@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Productivity Tool Documentation",
+  "name": "Manoj Jahgirdar",
   "colors": {
     "primary": "#0f62fe",
     "light": "#0f62fe",
@@ -11,21 +11,36 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Social Profiles",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "About me",
             "pages": [
-              "introduction"
+              "about/introduction",
+              "about/education",
+              "about/experience",
+              "about/innovation",
+              "about/certifications",
+              "about/skills",
+              "about/contributions",
+              "about/thought-leadership"
             ]
           },
           {
-            "group": "Features",
+            "group": "My Projects",
             "pages": [
-              "features/standardization",
-              "features/competitionanalysis",
-              "features/askmydata",
-              "features/insights"
+              "projects/browmix",
+              "projects/acp-agents",
+              "projects/genai-adaptive-assessment-system",
+              "projects/elevatordesign",
+              "projects/hobby"
+            ]
+          },
+          {
+            "group": "Miscellaneous",
+            "pages": [
+              "about/hobbies",
+              "about/awards"
             ]
           }
         ]
@@ -34,37 +49,42 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Productivity Tool",
-          "href": "https://opex.1nkjj9pnmhx0.us-east.codeengine.appdomain.cloud",
-          "icon": "arrow-up-right"
-        },
-        {
-          "anchor": "Feedback",
-          "href": "https://ibm-my.sharepoint.com/personal/aishwarya_pradeep1_ibm_com/_layouts/15/Doc.aspx?sourcedoc={6c313cfa-8880-451f-8873-1f0181a206be}&action=edit&wd=target%28Operational%20Excellence%20Feedbacks.one%7C30cb348e-fa1a-43d1-ae00-a7f50003df18%2FFeedbacks%7C2eb0829d-8ca1-457a-a4ed-223150609151%2F%29&wdorigin=NavigationUrl",
-          "icon": "comments"
-        },
-        {
           "anchor": "GitHub",
-          "href": "https://github.ibm.com/ecosystem-engineering-lab/opex-apis",
+          "href": "https://github.com/manojjahgirdar",
           "icon": "github"
+        },
+        {
+          "anchor": "LinkedIn",
+          "href": "https://www.linkedin.com/in/manojjahgirdar",
+          "icon": "linkedin"
+        },
+        {
+          "anchor": "Medium",
+          "href": "https://medium.com/@manojjahgirdar",
+          "icon": "medium"
+        },
+        {
+          "anchor": "Credly",
+          "href": "https://www.credly.com/users/manojjahgirdar",
+          "icon": "badge"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:manoj.jahgirdar@in.ibm.com;sumeet_kapoor@in.ibm.com;Surya.Deep.Singh@ibm.com;Suyash.Gupte2@ibm.com;Aishwarya.Pradeep1@ibm.com;Shruti.Nandan@ibm.com;Suman.P@ibm.com;Brunda.Reddy@ibm.com;syedame1@in.ibm.com?subject=Feedback/Bug%20Report%20-%20Productivity%20Tool"
+        "label": "Get in touch",
+        "href": "mailto:manojjahgirdar@gmail.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Productivity Tool",
+      "label": "Download CV",
       "href": "https://opex.1nkjj9pnmhx0.us-east.codeengine.appdomain.cloud"
     }
   }
