@@ -20,16 +20,18 @@ By simulating different enterprise personas—Data Scientist, CIO, and Customer 
 
 ## Architecture
 
+<img height="300" src="/images/trustworthy-ai/architecture.png" />
+
 The architecture follows a 3-phase lifecycle:
 
-1. Build
+1. **Build**
     - Azure File Shares to store datasets.
     - Azure ML Studio for building ML models using notebooks (code) and AutoML/Designer (no-code).
 
-2. Deploy
+2. **Deploy**
     - Model deployed as a web service in Azure ML Studio.
 
-3. Monitor
+3. **Monitor**
     - IBM Watson OpenScale on IBM Cloud Pak for Data on Azure:
         - Connects to deployed models via service principal.
         - Monitors models for Fairness, Quality, Drift, and Explainability.
@@ -39,13 +41,30 @@ The architecture follows a 3-phase lifecycle:
 Use Case:
 A financial services organization is expanding loan offerings and uses AI to process applications. They aim to ensure that the loan risk prediction model is **accurate, fair, and explainable**.
 
-Persona Experience:
+### Persona Experience
 - Data Scientist: Builds and deploys the credit risk model in Azure ML Studio.
 - CIO: Uses Watson OpenScale to ensure the model is not biased and performs reliably over time.
 - Customer Care: Uses model explainability to answer client questions (e.g., why a loan was denied).
 
-Key Features:
+### Key Features
 - Full integration between Azure and IBM Watson OpenScale.
 - Enterprise-grade explainability, fairness, and compliance tools.
 - Multi-cloud compatibility for real-world enterprise deployment.
 
+## Demo Link
+
+- [coming soon]()
+
+## GitHub Link
+
+- [Repository](https://github.com/IBM/ibm-azure-trusted-ai)
+
+## Skills Picked Up
+- Treditional ML Model Lifecycle Management in Azure ML Studio.
+- Jupyter Notebooks & Azure SDK for building ML models.
+- Use of AutoML and Designer UI in Azure ML.
+- Integration of Azure ML with IBM Watson OpenScale.
+- Setting up and interpreting KPIs: Fairness, Quality, Drift, Explainability.
+- Working with Azure Storage, Azure Compute, and Service Principals.
+- Configuring and using IBM Cloud services (Cloud Pak for Data, Object Storage, API Keys).
+- Understanding AI Governance in regulated industries (like Financial Services).
