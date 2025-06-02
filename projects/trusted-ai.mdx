@@ -1,0 +1,51 @@
+---
+title: "Govern a Traditional AI model"
+description: "coming soon"
+icon: "glasses"
+---
+
+## About
+
+The IBM-Azure Trusted AI use case is a collaborative solution demonstrating how machine learning models developed and deployed on Microsoft Azure Machine Learning Studio can be seamlessly monitored using IBM Watson OpenScale. It addresses the growing need for trustworthy, explainable, and compliant AI systems across industries, particularly financial services.
+
+## Overview
+
+Organizations often face challenges in operationalizing AI responsibly. These include detecting bias, ensuring fairness, providing model explainability, and managing regulatory compliance. This use case presents a cross-platform solution where:
+
+- **Microsoft Azure** is used to build and deploy ML models, and
+
+- **IBM** Watson OpenScale is used to monitor and govern model behavior across four KPIs: Fairness, Quality, Drift, and Explainability.
+
+By simulating different enterprise personas—Data Scientist, CIO, and Customer Service Agent—users experience a full AI lifecycle from model creation to monitoring and compliance.
+
+## Architecture
+
+The architecture follows a 3-phase lifecycle:
+
+1. Build
+    - Azure File Shares to store datasets.
+    - Azure ML Studio for building ML models using notebooks (code) and AutoML/Designer (no-code).
+
+2. Deploy
+    - Model deployed as a web service in Azure ML Studio.
+
+3. Monitor
+    - IBM Watson OpenScale on IBM Cloud Pak for Data on Azure:
+        - Connects to deployed models via service principal.
+        - Monitors models for Fairness, Quality, Drift, and Explainability.
+
+## Solution
+
+Use Case:
+A financial services organization is expanding loan offerings and uses AI to process applications. They aim to ensure that the loan risk prediction model is **accurate, fair, and explainable**.
+
+Persona Experience:
+- Data Scientist: Builds and deploys the credit risk model in Azure ML Studio.
+- CIO: Uses Watson OpenScale to ensure the model is not biased and performs reliably over time.
+- Customer Care: Uses model explainability to answer client questions (e.g., why a loan was denied).
+
+Key Features:
+- Full integration between Azure and IBM Watson OpenScale.
+- Enterprise-grade explainability, fairness, and compliance tools.
+- Multi-cloud compatibility for real-world enterprise deployment.
+
