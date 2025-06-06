@@ -25,9 +25,9 @@ icon: 'water'
     - A **4x4 motor driver** powered by a 9V battery to control motion.
     - The car continuously monitors the distance to objects in front. When an object is detected within **7 inches**, it stops to avoid impact.
 
-    ## GitHub Link
+    ## View project
 
-    - [Repository](https://github.com/manojjahgirdar/collision-detecting-car)
+    - [open link](https://github.com/manojjahgirdar/collision-detecting-car)
 
     ## Skills picked up
 
@@ -37,7 +37,74 @@ icon: 'water'
     - Using a 4x4 motor driver module
     - Applying basic electronics and embedded logic
   </Tab>
-  <Tab title="more coming soon!">
+  <Tab title="Network attached storage device (NAS)">
+
+    ## Overview
+
+    Repurposed an old computer as Network Attached Storage Device (NAS) to be my personal cloud storage.
+
+    ## View project
+
+    - [open link](https://onedrive.live.com/?id=F4E279C893B780B6%2125540&cid=F4E279C893B780B6)
+
+    ## Solution
+
+    Used an existing old computer to build a NAS. I used FreeNAS an open source Linux distribution as operating system and attached two hard drives of 500GB each and tried multiple RAID options. Finally went with RAID 1 to get 1TB of network storage. Learnt about different CAT cables and used a CAT6 cable to achieve 1000mbps of data transfer speed over the network. Also created a single node Kubernetes cluster on this NAS and used it as my testing Kubernetes cluster.
+
+    ## Skills picked up
+
+    - Computer Networking
+    - Linux
+    - Kubernetes
+
+  </Tab>
+  <Tab title="Smart home automation">
     
+    ## Overview
+
+    Built a smart home automation device, that can control any two electrical appliances via a phone application.
+
+    ## View project
+
+    - N/A
+
+    ## Solution
+
+    The smart home automation module consists of 2 relays and a Bluetooth sensor HC-05. The live wire from the switch board is connected to relays. The app built with mit app inventor can communicate to the Bluetooth module and send 0,1 input to the module. Based on that then relay is switched on or off and the electric appliance is switched on or off. 
+
+    ## Skills picked up
+
+    - Arduino C
+    - Working of Bluetooth module HC-05
+    - Working of relay
+    - App development using mit app inventor
+
+  </Tab>
+  <Tab title="Smart waste management">
+    
+    ## Overview
+
+    Equipped IoT to a bin and turned it into a smart bin capable of managing the waste smartly.
+
+    ## View project
+
+    - [coming soon]()
+
+    ## Solution
+
+    The solution was a simple yet sophesticated approach to enhance waste management in the city. The smart dustbin was equipped with IoT sensors such as ESP8266 the brain, ultrasonic sensor to measure depth of the bin, servo motor to lift and close the bin and PIR sensor to detect movement infront of the bin.
+    - When a person approached the dustbin, the PIR sensor detected it and sent a signal to ESP8266.
+    - The servo motor was then sent a signal to rotate 180 degrees to lift the lid of the bin.
+    - The person would then dump the garbage and walk away the lid would close.
+    - The ultrasonic sensor within the bin measured the level of waste that was getting accmulated. Once a set treshold was reached it was send a signal to ESP8266.
+    - The events were tracked in Google Firebase. And an SMS and email was sent to the authority with location of the Bin that was full.
+    - The authority could then send their vehicle to empty the dustbin.
+
+    ## Skills picked up
+
+    - Ultrasonic sensor's working and mapping.
+    - Google Firebase.
+    - Working with IoT devices such as ESP8266 & RaspberyPi.
+
   </Tab>
 </Tabs>

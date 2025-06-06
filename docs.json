@@ -50,14 +50,19 @@
     "global": {
       "anchors": [
         {
+          "anchor": "LinkedIn",
+          "href": "https://www.linkedin.com/in/manojjahgirdar",
+          "icon": "linkedin"
+        },
+        {
           "anchor": "GitHub",
           "href": "https://github.com/manojjahgirdar",
           "icon": "github"
         },
         {
-          "anchor": "LinkedIn",
-          "href": "https://www.linkedin.com/in/manojjahgirdar",
-          "icon": "linkedin"
+          "anchor": "Leetcode",
+          "href": "https://leetcode.com/u/manojjahgirdar",
+          "icon": "code"
         },
         {
           "anchor": "Medium",
