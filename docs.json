@@ -29,10 +29,10 @@
           {
             "group": "My Projects",
             "pages": [
-              "projects/browmix",
               "projects/acp-agents",
               "projects/genai-adaptive-assessment-system",
               "projects/trusted-ai",
+              "projects/browmix",
               "projects/elevatordesign",
               "projects/hobby"
             ]
