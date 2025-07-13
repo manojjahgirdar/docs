@@ -32,8 +32,9 @@
               "projects/overview",
               "projects/acp-agents",
               "projects/genai-adaptive-assessment-system",
-              "projects/trusted-ai",
               "projects/browmix",
+              "projects/trusted-ai",
+              
               "projects/smart-waste-management",
               "projects/hobby"
             ]
