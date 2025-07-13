@@ -29,6 +29,7 @@
           {
             "group": "My Projects",
             "pages": [
+              "projects/overview",
               "projects/acp-agents",
               "projects/genai-adaptive-assessment-system",
               "projects/trusted-ai",
