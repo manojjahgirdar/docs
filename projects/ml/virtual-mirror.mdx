@@ -1,0 +1,50 @@
+---
+title: "Augmented Reality powered Virtual Mirror"
+description: "Personalized jewellery recommendations with a virtual mirror"
+---
+
+## About
+
+This code pattern integrates a virtual mirror into an e-commerce mobile application using IBM technologies. It provides users with personalized jewellery recommendations based on their age and gender and enables them to try on products virtually using their mobile camera.
+
+
+## Overview
+
+The code pattern develops a hybrid mobile app using IBM Mobile Foundation, a recommendation engine, and a virtual mirror module. It leverages IBM Cloud services like Cloud Object Storage, Db2 on Cloud, and Cloud Foundry to build a seamless end-to-end experience for users to receive personalized product suggestions and try them in real-time.
+
+## Architecture
+
+![architecture](https://raw.githubusercontent.com/IBM/virtual-mirror-for-ecommerce/refs/heads/master/doc/source/images/flow.png)
+
+## Solution
+1.	**Recommendation Engine**
+    -	Uses age and gender to provide personalized product suggestions
+    -	Retrieves product images from IBM Cloud Object Storage
+    -	Queries product metadata from IBM Db2 on Cloud
+2.	**Virtual Mirror**
+    -	Allows real-time virtual try-on for jewellery items
+    -	Built with JavaScript and deployed on IBM Cloud Foundry
+3.	**Mobile App**
+    -	Built using Ionic and Cordova
+    -	Integrates both recommendation engine and virtual mirror using IBM Mobile Foundation adapters
+    -	Uses camera access for live try-on
+
+## Demo
+
+- [Demo Link](https://www.youtube.com/watch?v=NOX_uWVymco)
+
+## GitHub Link
+
+- [Repository](https://github.com/IBM/virtual-mirror-for-ecommerce)
+
+## Skills Picked Up
+-	Mobile App Development: Using Ionic + Cordova + Android SDK
+-	Backend Integration: IBM Mobile Foundation, Cloud Foundry, and REST APIs
+-	AI/ML Basics: Basic product recommendation logic using clustering
+-	IBM Cloud Object Storage
+-	IBM Db2 on Cloud
+-	IBM Cloud Foundry
+-	Docker-like CLI deployment with IBM Cloud
+-	MFP CLI for managing adapters and apps
+-	APK generation and app store readiness
+-	Computer Vision (Basic): Integrating camera for real-time product overlays

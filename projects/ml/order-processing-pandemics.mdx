@@ -1,0 +1,66 @@
+---
+title: "Online & Offline order processing during pandemics"
+description: "Where there was a pandemic, no gig workers, no quick commerce, we came up with this call for code submission!"
+---
+
+## About
+
+This solution enables AI-powered order processing systems designed for use during pandemic lockdowns to ensure safe, efficient, and inclusive access to essentials like groceries and medicines. It supports both online users via chatbot and web apps, and offline users through toll-free phone calls processed by speech and language AI.
+
+## Overview
+<Tip>**Note that this solution was developed during covid when there were no quick commerce stores available!**</Tip>
+
+During lockdowns, physical access to stores can be risky, and digital literacy varies across demographics. This solution includes two modes:
+-	Online Mode: A chatbot-driven web app powered by Watson Assistant helps users place orders via natural conversation. The system processes the order text, extracts customer and item details, and stores them in IBM Db2.
+-	Offline Mode: Users call a toll-free number. Audio inputs are transcribed, translated (if needed), and analyzed using a Watson Knowledge Studio model deployed via Natural Language Understanding to extract order details, which are then stored in Db2.
+
+In both modes, orders are visualized in a dashboard, enabling real-time tracking and efficient inventory management.
+
+## Architecture
+
+![architecture](/images/order-processing.jpg)
+
+## Solution
+
+**Online Order Processing**
+- Users interact with a chatbot on a web app.
+- Watson Assistant processes natural language queries to extract order items and user details.
+- Data is stored in IBM Db2 and visible in an admin dashboard.
+- Built-in geolocation and quick select menus for common items enhance usability.
+
+**Offline Order Processing**
+- Users call a toll-free number to place orders via voice.
+- Workflow:
+	1.	Speech to Text transcribes the call.
+	2.	Language Translator (if needed) translates local language to English.
+	3.	Watson Knowledge Studio model on NLU extracts order items and customer info.
+	4.	IBM Db2 stores data; dashboard provides real-time visibility.
+
+## Demo Link
+
+- [Demo Video](https://www.youtube.com/watch?v=QXxt4iH8tNY)
+
+## GitHub Link
+
+- [Online order processing](https://github.com/IBM/online_order_processing_during_pandemics)
+- [Offline order processing](https://github.com/IBM/offline_order_processing_during_pandemics)
+
+## Skills picked up
+- Conversational AI
+- Designing intents, entities, and dialogs in Watson Assistant
+- Integrating chatbot with backend services
+- Speech & Language Processing
+- Watson Speech to Text
+- Watson Language Translator
+- Watson Knowledge Studio + NLU for custom entity extraction
+- Database Integration
+- Storing structured order data using IBM Db2
+- Cloud Deployment
+- IBM Cloud Foundry app setup
+- Dashboard visualization for admins
+- Multilingual & Accessibility Design
+- Handling Hindi/regional audio for offline users
+- Designing for users without smartphones or internet access
+- Real-World Application Development
+- Use of RESTful APIs and cloud microservices
+- Local and cloud deployment with Docker and IBM Cloud CLI

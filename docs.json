@@ -30,13 +30,19 @@
             "group": "My Projects",
             "pages": [
               "projects/overview",
-              "projects/acp-agents",
-              "projects/genai-adaptive-assessment-system",
-              "projects/browmix",
-              "projects/trusted-ai",
-              
-              "projects/smart-waste-management",
-              "projects/hobby"
+              "projects/genai/acp-agents",
+              "projects/genai/e-commerce-usecase",
+              "projects/genai/financial-advisor-usecase",
+              "projects/genai/rag-playbooks",
+              "projects/genai/genai-adaptive-assessment-system",
+              "projects/genai/safety-at-large-public-events",
+              "projects/erp/browmix",
+              "projects/ml/trusted-ai",
+              "projects/ml/summarize-a-video-or-audio",
+              "projects/ml/virtual-mirror",
+              "projects/ml/order-processing-pandemics",
+              "projects/miscellaneous/smart-waste-management",
+              "projects/miscellaneous/hobby"
             ]
           },
           {
