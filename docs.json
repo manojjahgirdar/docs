@@ -38,6 +38,7 @@
               "projects/genai/acp-agents",
               "projects/genai/e-commerce-usecase",
               "projects/genai/financial-advisor-usecase",
+              "projects/genai/sre_agent",
               "projects/genai/rag-playbooks",
               "projects/genai/genai-adaptive-assessment-system",
               "projects/genai/safety-at-large-public-events",
