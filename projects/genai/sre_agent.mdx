@@ -3,4 +3,42 @@ title: "On-call SRE Agent"
 description: "AI-driven SRE agent for on-call support, incident management, and system health monitoring"
 ---
 
-Coming soon
+## About
+
+The SRE Agent is an AI-powered automation assistant designed to handle routine Site Reliability Engineering (SRE) remediation workflows, and assist with Kubernetes deployments and logs.
+
+## Overview
+
+A Site Reliable Engineer(SRE), on-call will get several levels of incidents. Some incidents are common issues that occur due to network glitch, database glitch etc. For example PGBOUNCER error, Database connection refusal error, Request time out error, etc. The product team mostly maintains a runbook for these commonly occuring errors which a SRE will execute to remediate these incidents. Another pattern is where there are logs that are unique and with pod logs and activity monitoring logs certain conclusion can be drawn and action can be taken to remediate these scenarios. However the time taken by an on-call SRE to resolve these need to be quick as it my affect the SLAs of the service/product. That is where the SRE Agent will help improve the productivty.
+
+## Architecture
+
+
+<img height="300" className="block dark:hidden" src="/images/sre-agent/arch-light.jpg" />
+<img height="300" className="hidden dark:block" src="/images/sre-agent/arch-dark.jpg" />
+
+## Solution
+
+The SRE Agent is an AI-powered assistant, that can help improve productivity of an SRE by performing various remediation steps on its own with the help of reasoning foundational models or have human-in-the-loop and present a root cause analysis by referring to Logs and provide remediation steps. The SRE Agent has the following sub-agents that do 1 task each:
+
+1. **Troubleshooter Agent:** This agent is responsible to get the pods, pod logs of the affected service, analyze the logs, search the knowledge base for remediation steps for such incidents and present a detailed troubleshooting guide to the SRE.
+2. **Remediation Agent:** This agent is equipped with tools that have access to kubernetes cluster write operations and it can execute a runbook/instructions provided by the troubleshooter agent and try to resolve the incident after getting an approval from the SRE.
+3. **Kubernetes FAQs and Runbooks Agent:** This agent has multiple knowledge bases related to Kubernetes and runbooks and can help provide the remediation steps.
+
+Overall, the SRE Agent is a **multi-agent supervisor** that has **contextual-memory** and is a robust system that can reason through and help imporve the productivity of an SRE.
+
+<Note>For high severity and customer impacting incidents this agent can only help provide information, and it will not take any actions without human intervention.</Note>
+
+## Demo Link
+
+- N/A
+
+## GitHub Link
+
+- Coming soon
+
+## Skills picked up
+
+- Multi-agent orchestration
+- Async tool calling
+- Model context protocol (MCP)
