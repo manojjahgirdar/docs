@@ -1,0 +1,48 @@
+---
+title: 'Self-service KYC Agent'
+description: 'A DeepAgent with planning, Extensive context, Diverse expertise and adaptive solution to process documents, classify intent and entity and perfrom customer due diligence with AI Agents Interoperability fundamentals.'
+---
+
+## About
+
+Complex tasks that motivate multi-agent approaches typically exhibit four key characteristics:
+
+- **Planning**: Complex tasks often require a high level plan, which involves decomposing the task into steps that must be completed successfully.
+- **Extensive context**: Complex tasks often require extensive context that need to be processed to solve the task.
+- **Diverse expertise**: Decomposing complex tasks into multiple steps often results in steps that can benefit from specific expertise.
+- **Adaptive solution**: Complex tasks are often situated in dynamic environments where the exact solution is unknown or uncertain until some actions are taken.
+
+
+## Overview
+
+When a banking customer has to do a KYC, if done offline it will take 8–12hrs. If done online, It will still take an hour along with human intervention. To expedite this AI Agents can be used to help the customers get their self-serviced KYC done in minutes removing any human intervention!
+
+## Architecture
+
+<img height="300" className="block dark:hidden" src="/images/self-service-kyc-assistant/architecture-light.png" />
+<img height="300" className="hidden dark:block" src="/images/self-service-kyc-assistant/architecture-dark.png" />
+
+## Solution
+
+The DeepAgent has 5 core elements, Tools, Planning tool, System prompt, File system & Sub agents. I have explained in this article [here](https://medium.com/@manojjahgirdar/why-most-ai-agents-fail-and-how-to-build-an-ai-agent-for-complex-tasks-a8d96146b588), how the agent ties all these to solve complex tasks.
+
+When a user uploads a document for example Aadhaar card, DL or PAN (can be extended for any documents) the DeepAgent works as follows:
+
+1. With document extraction, the PII information is extracted from the document.
+1. Planning agent created todo items of what searches to be made and saves it to the file system.
+1. The sub-agents are invoked according to the system prompt and the plan and extensive research is performed.
+1. A detailed customer risk analysis done and a report is generated with CDD, EDD risk profiles.
+
+## Example report
+
+- [KYC Due Diligence Report: Vijay Mallya](https://github.com/manojjahgirdar/self-service-kyc-agent/blob/main/reports/KYC_report.pdf?raw=True)
+
+## GitHub Link
+
+- [Repository](https://github.com/manojjahgirdar/self-service-kyc-agent)
+
+## Skills picked up
+
+- LangChain DeepAgents
+- Document processing with Docling
+- Multi-agent complex agent
