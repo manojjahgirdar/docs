@@ -35,6 +35,7 @@
             "group": "My Projects",
             "pages": [
               "projects/overview",
+              "projects/genai/schema-resilient-nl-to-sql-agent",
               "projects/genai/acp-agents",
               "projects/genai/e-commerce-usecase",
               "projects/genai/financial-advisor-usecase",

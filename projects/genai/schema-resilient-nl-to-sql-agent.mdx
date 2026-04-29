@@ -1,0 +1,43 @@
+---
+title: "Schema-Resilient NL-to-SQL Agent"
+description: "An AI agent that accurately translates natural language to SQL over poorly structured, legacy databases."
+---
+
+## About
+
+The Schema-Resilient NL-to-SQL Agent is an AI-powered assistant designed to accurately translate natural language queries into SQL over poorly structured, legacy databases — demonstrated on a utility-domain dataset. It addresses real-world data challenges including inconsistent naming conventions, mixed data types, redundant attributes, and missing foreign keys that accumulate through decades of system migrations, mergers, and operational patches.
+
+## Overview
+
+Enterprises often operate on databases that have evolved over decades, accumulating schema inconsistencies, mixed identifier conventions, inconsistent date formats, and redundant attributes. Business users and operations teams struggle to extract reliable insights from such systems, and traditional Text-to-SQL solutions tend to hallucinate or generate unsafe queries when faced with this complexity. There is a need for an agent that can reason over messy schemas, restrict its query generation space, and transparently communicate the assumptions it makes — while ensuring read-only safety in regulated environments.
+
+## Solution
+
+We developed a LangGraph-based ReAct agent backed by an MCP server that abstracts schema inspection, validation, and execution as tools. The solution layers normalization and intent-driven NL-to-SQL translation to ensure reliability:
+
+- **Schema & Data Handling:** A deliberately messy SQLite database simulates production utility systems, with a normalization layer that converts raw operational tables into clean analytical views.
+- **Intent-driven NL-to-SQL:** The agent classifies user intent and constrains the SQL generation space, reducing hallucinations and improving accuracy.
+- **Rule-based SQL Validator:** Every generated query is validated for read-only access before execution, ensuring safety in regulated environments.
+- **Explainable Responses:** The agent transparently communicates assumptions, data limitations, and any constraints or exclusions applied to each query.
+- **Dual Interface:** Accessible via both a command-line interface and a Streamlit web UI.
+
+The POC includes 8 tables — `customer_accounts`, `meter_assets`, `meter_readings`, `billing_info`, `service_requests`, `outage_events`, `infra_assets`, and `payments_received` — each exhibiting realistic data quality issues. The architecture isolates schema complexity upstream, enabling reliable LLM reasoning over predictable structures.
+
+<Note>The design philosophy acknowledges that at scale, normalization and data quality handling should move to ingestion, while maintaining a consistent agent architecture suitable for regulated environments.</Note>
+
+## Demo Link
+
+- [Video Walkthrough](https://youtu.be/NnVQ6umm2Cw)
+
+## GitHub Link
+
+- [Repository](https://github.com/manojjahgirdar/chatbot-utility-data)
+
+## Skills picked up
+
+- LangGraph & LangChain (ReAct Agent Framework)
+- FastMCP Model Context Protocol (HTTP-streamable)
+- Ollama with gpt-oss:20b model
+- Intent classification & constrained NL-to-SQL generation
+- Rule-based SQL validation for read-only safety
+- Streamlit UI development
