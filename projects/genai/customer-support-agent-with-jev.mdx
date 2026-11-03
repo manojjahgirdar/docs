@@ -1,0 +1,44 @@
+---
+title: "Customer Support Agent with Jev"
+description: "A customer-support agent that uses Jev's typed classification to guide triage, model routing, policies, and human review."
+---
+
+## About
+
+The Customer Support Agent with Jev is a customer-support assistant for Tiffin, a fictional food-delivery service. It demonstrates how typed classification can guide an agent's decisions and actions instead of leaving triage entirely to a language model.
+
+## Overview
+
+For each customer message, Jev classifies the issue, urgency, frustration, and need for deeper reasoning. The harness uses those results to select a support skill, route the request to an appropriate model, and determine whether an action needs human approval or escalation.
+
+The project includes a command-line chat, a customer-facing web chat, and an internal support dashboard. The dashboard exposes conversation traces, approval and escalation queues, and the decisions made by the agent.
+
+## Solution
+
+- **Typed triage:** Uses LangChain agents and Jev's `TypeSafeClassifier` to classify support requests and guide the agent's control flow.
+- **Skill and model routing:** Loads a category-specific support skill and routes straightforward requests separately from requests that need deeper reasoning.
+- **Policy-aware actions:** Applies refund and fulfilment-stage policies, with safeguards against refund abuse and human approval for higher-risk actions.
+- **Human oversight:** Supports approval and escalation workflows rather than allowing every proposed action to run automatically.
+- **Persistent, reviewable conversations:** Stores conversations and decision traces in SQLite so paused work can resume and support decisions can be reviewed.
+- **Three interfaces:** Provides a command-line chat, customer-facing chat, and an internal support dashboard, backed by a FastAPI service.
+
+## Example
+
+When a customer asks about a delayed order, Jev can classify the request as order tracking, detect frustration and urgency, and select the relevant support skill. The agent can then provide specific order context rather than repeating a generic status. If the conversation turns to a refund or cancellation, the harness applies the relevant policies and can route a proposed action for human review.
+
+## Demo Link
+
+- N/A
+
+## GitHub Link
+
+- [Repository](https://github.com/manojjahgirdar/agentic_harness_with_jev)
+
+## Skills picked up
+
+- Building agents and middleware with LangChain 1.x.
+- Using typed classification to drive agent control flow and model routing with System One models.
+- Designing policy gates, human-in-the-loop approvals, and escalation paths.
+- Persisting and resuming conversations with SQLite-backed checkpoints.
+- Building customer-facing and internal interfaces backed by a FastAPI service.
+- Tracing agent decisions for operational visibility and review.
